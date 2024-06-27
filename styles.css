@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 2em auto;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    min-width: 100%;
+}
+
+.waterfall {
+    position: relative;
+    width: 80%;
+    height: 200px;
+    margin: 2em auto;
+    background: url('waterfall-background.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.waterfall-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.water {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 100%;
+    background: rgba(0, 0, 255, 0.7);
+    animation: flow 2s linear infinite;
+}
+
+@keyframes flow {
+    0% {
+        transform: translateX(-50%) translateY(-100%);
+    }
+    100% {
+        transform: translateX(-50%) translateY(100%);
+    }
+}
